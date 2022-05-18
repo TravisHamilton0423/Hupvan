@@ -1,0 +1,174 @@
+.body.landing-driver {
+    .header {
+        box-sizing: content-box;
+        background-image: url("/assets/img/driver.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: auto 800px;
+        @include phone {
+            background-image: none;
+            &.p-10 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            .btn-trans {
+                width: calc(100% - 6rem);
+                font-size: 2rem;
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+            p.w-50 {
+                width: 100% !important;
+            }
+        }
+        .img-sm {
+            display: none;
+            @include phone {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin-bottom: 5rem;
+            }
+        }
+        h2 {
+            text-transform: uppercase;
+            color: $primary;
+            font-size: 67px;
+            @include phone {
+                font-size: 50px;
+            }
+            &+p {
+                font-size: 24px;
+                color: $heading;
+                @include phone {
+                    font-size: 18px;
+                }
+            }
+        }
+        h3 {
+            font-size: 54px;
+            @include phone {
+                font-size: 32px;
+            }
+            font-weight: 100;
+        }
+        .btn-trans {
+            font-size: 32px;
+        }
+    }
+    .why-hupvan {
+        padding: 3rem 0;
+        background-color: $ternary;
+        position: relative;
+        overflow: hidden;
+        h2 {
+            font-size: 50px;
+            @include phone {
+                text-align: center;
+                font-size: 2rem;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+        h5 {
+            font-size: 22px;
+            margin-bottom: 15px;
+
+            &+p {
+                font-size: 20px;
+            }
+        }
+        .img-support {
+            width: 150%;
+            height: auto;
+            margin-top: -75px;
+            margin-left: -125px;
+
+            @include phone {
+                // width: 100%;
+                // height: auto;
+                // margin-top: 0;
+                // margin-left: 0;
+            }
+        }
+        .img-decorator {
+            position: absolute;
+            bottom: 100px;
+            right: 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            @include phone {
+                display: none;
+            }
+        }
+        @include phone {
+            .pt-10 {
+                padding-top: 0;
+            }
+        }
+    }
+    .faq {
+        padding: 131px 0 143px;
+        @include phone {
+            padding: 85px 0 90px;
+        }
+        h2 {
+            font-size: 50px;
+            @include phone {
+                font-size: 24px;
+                margin-bottom: 48px;
+            }
+        }
+        .title {
+            display: block;
+            color: $heading;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        .question {
+            border-radius: 50%;
+            background-color: $text;
+            color: white;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            margin-right: 15px;
+            text-align: center;
+            line-height: 30px;
+            &+span {
+                flex: 1;
+            }
+        }
+        i {
+            margin-top: 5px;
+        }
+    }
+    .get-started {
+        padding: 92px 0 88px;
+        background-color: $ternary;
+        h3 {
+            font-size: 32px;
+        }
+        .btn-trans {
+            font-size: 30px;
+        }
+
+        @include phone {
+            h3 {
+                font-size: 2em;
+                font-weight: bold;
+            }
+            .btn-trans {
+                font-size: 2rem;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+    }
+}

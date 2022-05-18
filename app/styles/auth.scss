@@ -1,0 +1,357 @@
+.register {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    h2 {
+        font-size: 50px;
+        margin-bottom: 73px;
+    }
+    form {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .option-group {
+        background-color: $white;
+        border: none;
+        padding: 0 0 0 1rem;
+    }
+    @include phone {
+        form {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .mb-5 {
+            margin-bottom: 2rem !important;
+        }
+    }
+}
+
+
+/* modal-view */
+
+.modal-view {
+    width: 100%;
+    background-color: $white;
+    position: relative;
+    z-index: 1;
+    &:before,
+    &:after {
+        content: ' ';
+        position: absolute;
+        display: block;
+        pointer-events: none;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &:before {
+        top: 40%;
+        left: 0;
+        background-image: url('/assets/img/modal-bg-left.png');
+        width: 75px;
+        height: 150px;
+    }
+    &:after {
+        bottom: 20%;
+        right: 0;
+        background-image: url('/assets/img/modal-bg-right.png');
+        width: 50px;
+        height: 100px;
+    }
+    @include phone {
+        &:before,
+        &:after {
+            content: '';
+            display: none;
+        }
+    }
+    .close-icon {
+        display: inline-block;
+        font-size: 8rem;
+        line-height: 6rem;
+        color: $heading;
+        position: absolute;
+        left: 1rem;
+        top: 0rem;
+        color: $primary;
+        @include phone {
+            left: initial;
+            right: 1rem;
+            top: 1rem;
+            font-size: 3rem;
+            line-height: 1;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .main-content {
+        padding-top: 6rem;
+        @include phone {
+            padding-top: 0;
+        }
+        .logo-wrapper {
+            text-align: center;
+            @include phone {
+                text-align: left;
+                padding-left: 1rem;
+                padding-top: 1rem;
+            }
+        }
+        .logo-wrapper1 {
+            text-align: center;
+            display: none;
+            @include phone {
+                text-align: left;
+                padding-left: 1rem;
+                padding-top: 1rem;
+                display: block;
+            }
+        }
+        a.logo-link {
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            @include phone {
+                font-size: 2rem;
+            }
+        }
+        a.logo-link1 {
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            @include phone {
+                font-size: 2.5rem;
+            }
+        }
+        span.vsplitter {
+            display: inline-block;
+            width: 1px;
+            border-right: 1px dashed $black;
+            margin-left: 2.5rem;
+            margin-right: 2.5rem;
+            height: 80px;
+            vertical-align: middle;
+            &+span small {
+                font-size: 2.5rem;
+                @include phone {
+                    font-size: 1.6rem;
+                }
+            }
+            @include phone {
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+            }
+        }
+    }
+    .modal-wrapper {
+        background-color: $white;
+        max-width: 520px;
+        &.big {
+            max-width: 954px;
+        }
+        width: 100%;
+        margin: 6rem auto;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px 0 $shadow;
+        min-height: 500px;
+        position: relative;
+        &:before,
+        &:after {
+            content: ' ';
+            position: absolute;
+            display: block;
+            pointer-events: none;
+            z-index: -1;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:before {
+            bottom: 20%;
+            background-image: url('/assets/img/modal-form-left.png');
+            width: 418px;
+            height: 165px;
+            left: -129px;
+        }
+        &:after {
+            top: 5%;
+            right: -107px;
+            background-image: url('/assets/img/modal-form-right.png');
+            width: 214px;
+            height: 214px;
+        }
+        &.big:before {
+            left: -90px;
+        }
+        @include phone {
+            box-shadow: none;
+            margin: 1rem auto;
+            &:before,
+            &:after {
+                content: '';
+                display: none;
+            }
+        }
+    }
+    .modal-inner {
+        padding: 5rem 3rem;
+        @include phone {
+            padding: 1rem;
+        }
+        .login-actions {
+            margin-top: 15rem;
+            @include phone {
+                margin-top: 6rem;
+                margin-bottom: 6rem;
+            }
+        }
+        .bottom-gray-line {
+            height: 1px;
+            background-color: #B3B3B3;
+            margin: 1.6rem 1rem;
+            width: calc(100% - 2rem);
+        }
+        .btn-round-primary {
+            padding: 1.5rem 10rem;
+            border-radius: 2.9rem;
+            @include phone {
+                padding: 1rem;
+                border-radius: 2.5rem;
+            }
+        }
+        form label {
+            font-size: 1.4rem;
+        }
+        form.signup-driver {
+            label {
+                font-size: 1rem;
+            }
+        }
+    }
+    .bottom-line {
+        height: 2px;
+        background-color: #31AA45;
+        margin: -2px 0.5rem;
+    }
+    .verify-phone {
+        select.addon {
+            display: block;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            height: 59px;
+            width: 80px;
+            padding: 1rem;
+            border: none;
+            background-color: $formBg;
+            border-bottom-left-radius: 1rem;
+            border-top-left-radius: 1rem;
+            border-right: 2px solid $formBorder;
+            // appearance: none;
+            // -webkit-appearance: none;
+            &:focus,
+            &:active {
+                box-shadow: none;
+                outline: none;
+            }
+            &+input {
+                padding-left: 96px;
+            }
+        }
+    }
+    .form-type {
+        position: absolute;
+        left: 0.85rem;
+        top: 0.2rem; 
+        color: #999999;
+        font-size: 0.8rem;
+    }
+    .form-control {
+        @include phone {
+            min-width: 328px !important;
+            max-width: 328px !important;
+        }
+        &::placeholder {
+            color: #999999;
+        }
+        &:focus{
+            & + .form-type{
+                color: #31AA45;
+            }
+        }
+    }
+    .verify-final {
+        .form-control {
+            padding-right: 0rem;
+        }
+        .fifth-number {
+            border: none;
+            position: absolute;
+            width: 5.8rem;
+            top: 0.4rem;
+            padding-left: 2.9rem;
+            right: 1px;
+            &:focus {
+                border: none;
+                & + input {
+                    border: 1px solid $primary;
+                    background-color: white;
+                }
+            }
+        }
+        .code-circle {
+            position: absolute;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: $primary;
+            border-radius: 50%;
+        }
+        .first-position {
+            left: 4.4rem;
+        }
+        .second-position {
+            left: 8.4rem;
+        }
+        .third-position {
+            left: 12.2rem;
+        }
+        .fourth-position {
+            left: 15.8rem;
+        }
+    }
+    .letter-spacing-auto {
+        letter-spacing: 3.3rem;
+    }
+    .verify-number {
+        input.form-control {
+            text-align: center;
+            font-size: 2rem;
+            line-height: 1.5rem;
+            &::placeholder {
+                color: $primary;
+            }
+        }
+    }
+    .signup-driver {
+        .signup-actions {
+            margin-top: 5rem;
+            margin-bottom: -3rem;
+            @include phone {
+                margin-bottom: 0rem;
+            }
+        }
+    }
+    .signup-success {
+        .need-help {
+            background-image: url("/assets/img/success.png");
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            padding: 13rem 0 6rem;
+        }
+    }
+    .modal-wrapper.big .signup-step {
+        form label {
+            font-size: 1rem;
+        }
+    }
+}

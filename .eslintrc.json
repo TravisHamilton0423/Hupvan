@@ -1,0 +1,50 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "no-var": 2,
+    "no-underscore-dangle": 0,
+    "comma-dangle": 0,
+    "no-func-assign": 2,
+
+    "indent": [
+      2,
+      2,
+      { "SwitchCase": 1 }
+    ],
+
+    "brace-style": [
+      2,
+      "1tbs", {
+        "allowSingleLine": true
+      }
+    ],                               // http://eslint.org/docs/rules/brace-style
+    "quotes": [
+      2, "single", "avoid-escape"    // http://eslint.org/docs/rules/quotes
+    ],
+    "camelcase": [2, {               // http://eslint.org/docs/rules/camelcase
+      "properties": "never"
+    }],
+    "comma-spacing": [2, {           // http://eslint.org/docs/rules/comma-spacing
+      "before": false,
+      "after": true
+    }],
+    "comma-style": [2, "last"],      // http://eslint.org/docs/rules/comma-style
+    "key-spacing": [2, {             // http://eslint.org/docs/rules/key-spacing
+      "beforeColon": false,
+      "afterColon": true
+    }],
+
+    //React
+    "react/jsx-uses-react": 2,
+    "react/no-danger": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-handler-names": 2
+  },
+  "plugins": [
+    "react",
+    "redux-saga",
+    "jsx-a11y"
+  ]
+}

@@ -1,0 +1,423 @@
+.banner {
+    padding-top: 107px;
+    @include phone {
+        padding-top: 5rem;
+    }
+    background-color: $primary;
+    h3 {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 43px;
+        color: white;
+        @include phone {
+            font-size: 1.5rem;
+        }
+    }
+    &.landing {
+        background-image: url('/assets/img/banner.png');
+        background-repeat: no-repeat;
+        background-size: 1200px auto;
+        background-position: center bottom;
+        min-height: 600px;
+        @include phone {
+            background-size: 370px auto;
+            min-height: 350px;
+            background-position-y: 80%;
+        }
+    }
+}
+
+.body {
+    .search-box {
+        background-color: white;
+        border-radius: 30px;
+        padding: 15px;
+        margin: -40px 0 0;
+        @include phone {
+            border-radius: 10px;
+            margin: -50px 0 0;
+            .d-flex {
+                flex-direction: column;
+            }
+        }
+        input {
+            border-radius: 15px;
+            padding-left: 90px;
+            border: none;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+            @include phone {
+                border-radius: 10px;
+            }
+        }
+        .pickup {
+            flex: 0.4;
+            padding-right: 15px;
+            .form-control {
+                height: 100px;
+                @include phone {
+                    height: 60px;
+                }
+            }
+            @include phone {
+                padding-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+        .destination {
+            flex: 0.4;
+            padding-left: 15px;
+            .form-control {
+                border-radius: 15px 0 0 15px;
+                height: 100px;
+                @include phone {
+                    height: 60px;
+                }
+                &+img {
+                    left: 45px;
+                    @include phone {
+                        left: 25px;
+                    }
+                }
+            }
+            @include phone {
+                padding-left: 0;
+                margin-bottom: 1rem;
+                .form-control {
+                    border-radius: 10px;
+                }
+            }
+        }
+        .pickup,
+        .destination {
+            position: relative;
+            &>img {
+                position: absolute;
+                left: 30px;
+                top: 28px;
+                @include phone {
+                    left: 25px;
+                    top: 10px;
+                }
+            }
+        }
+        .action {
+            flex: 0.2;
+            .btn-action {
+                font-weight: normal;
+                border-radius: 0 15px 15px 0;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+                height: 100px;
+                @include phone {
+                    height: 60px;
+                }
+                font-size: 32px;
+                @include phone {
+                    border-radius: 10px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        button.btn-action {
+            width: 100%;
+        }
+    }
+    .services {
+        @include phone {
+            margin: 0px;
+        }
+        h3 {
+            font-size: 52px;
+            @include phone {
+                font-size: 28px;
+            }
+        }
+        h4 {
+            font-size: 32px;
+            @include phone {
+                font-size: 20px;
+            }
+        }
+        p.desc {
+            max-width: 600px;
+            margin: 0 auto;
+            color: $text;
+            font-size: 20px;
+            @include phone {
+                font-size: 18px;
+            }
+        }
+        .main-services {
+            .card {
+                @include shadow(0px,
+                8px,
+                16px,
+                0.06);
+                border: none;
+                border-radius: 30px;
+                text-align: center;
+                padding-top: 100px;
+                padding-bottom: 50px;
+                min-height: 376px;
+                cursor: pointer;
+
+                @include phone {
+                    margin-left: 3rem;
+                    margin-right: 3rem;
+                    min-height: 250px;
+                    padding-top: 68px;
+                    padding-bottom: 33px;
+                }
+                .card-img-wrapper {
+                    display: inline-block;
+                    margin: 0 auto 45px auto;
+                }
+                img {
+                    width: auto;
+                    height: 140px;
+                    object-fit: contain;
+                    @include phone {
+                        height: 95px;
+                    }
+                }
+                .card-body {
+                    padding: 0;
+                }
+                .card-title {
+                    font-size: 28px;
+                    margin-bottom: 0;
+                    @include phone {
+                        font-size: 19px;
+                    }
+                }
+                .card-text {
+                    display: none;
+                    font-size: 22px;
+                    @include phone {
+                        font-size: 15px;
+                    }
+                }
+                &.selected {
+                    padding-top: 35px;
+                    padding-bottom: 85px;
+
+                    @include phone {
+                        padding-top: 24px;
+                        padding-bottom: 57px;
+                    }
+                    .card-img-wrapper {
+                        display: inline-block;
+                        border: 2px solid $primary;
+                        border-radius: 50%;
+                        margin-bottom: 13px;
+                        text-align: center;
+                        overflow: hidden;
+                        padding: 30px;
+                    }
+                    img {
+                        height: 60px;
+                        width: 60px;
+                    }
+                    .card-title {
+                        color: $primary;
+                    }
+                    .card-text {
+                        display: block;
+                        margin-top: 20px;
+                        padding-left: 22px;
+                        padding-right: 22px;
+                    }
+                    &:after {
+                        display: block;
+                        height: 3px;
+                        width: calc(100% - 60px);
+                        background-color: $secondary;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 30px;
+                        content: ' ';
+                    }
+                }
+            }
+        }
+        .other-services {
+            text-align: center;
+            .misc-service {
+                display: inline-block;
+                margin: 0 auto;
+                padding: 15px 50px 15px 35px;
+                border-radius: 45px;
+                @include shadow(0px,
+                12px,
+                8px,
+                0.08);
+                @include phone {
+                    width: 100%;
+                }
+                img {
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    object-fit: contain;
+                    margin-right: 30px;
+                }
+                span {
+                    // font-weight: bold;
+                    color: $primary;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+    .storages-nearby {
+        h3 {
+            font-size: 40px;
+            @include phone {
+                font-size: 32px;
+            }
+        }
+    }
+    .our-vans {
+        h3 {
+            font-size: 40px;
+        }
+        .van {
+            background-color: $ternary;
+            border-radius: 30px;
+            @include shadow(0px,
+            6px,
+            4px,
+            0.2);
+            padding: 30px;
+            img {
+                display: block;
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+            strong {
+                display: block;
+                text-align: center;
+                color: $heading;
+                font-size: 24px;
+                @include phone {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .apps {
+        background-color: $ternary;
+        @include phone {
+            padding-bottom: 58px;
+        }
+
+        h3 {
+            font-size: 60px;
+            @include phone {
+                font-size: 35px;
+            }
+        }
+        h3+p {
+            font-size: 24px;
+            @include phone {
+                font-size: 18px;
+            }
+        }
+        img.app-bg {
+            height: 500px;
+            width: auto;
+            @include phone {
+                height: auto;
+                width: 100%;
+            }
+        }
+        .app-desc {
+            margin-top: 120px;
+            @include phone {
+                margin-top: -50px;
+                h3 {
+                    font-size: 2.5rem;
+                }
+                div {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.storage {
+    @include shadow(0px,
+    8px,
+    16px,
+    0.06);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: ease-in-out height 0.1s;
+    .storage-thumb {
+        position: relative;
+        img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            @include phone {
+                height: 220px;
+            }
+        }
+        .storage-rating {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: $white;
+            border-radius: 3px;
+            font-size: 0.8em;
+            padding: 4px 8px;
+            color: $heading;
+            i {
+                color: $secondary;
+            }
+        }
+    }
+    .storage-info {
+        padding: 15px;
+        h5 {
+            font-size: 22px;
+            font-weight: bold;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-bottom: 19px;
+        }
+        .distance {
+            img {
+                vertical-align: super;
+                margin-right: 5px;
+            }
+        }
+        .away {
+            display: inline-block;
+            .label {
+                font-size: 12px;
+                color: $text;
+                display: block;
+            }
+            .minutes {
+                color: $heading;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 1
+            }
+        }
+        .price {
+            color: $secondary;
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            span.price-label {
+                font-weight: normal;
+                font-size: 12px;
+            }
+        }
+    }
+}

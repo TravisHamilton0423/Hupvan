@@ -1,0 +1,25 @@
+@mixin shadow($x: 0px, $y: 2px, $blur: 5px, $op: 0.2) {
+    -moz-box-shadow: $x $y $blur rgba(0,0,0,$op);
+    -webkit-box-shadow: $x $y $blur rgba(0,0,0,$op);
+    box-shadow: $x $y $blur rgba(0,0,0,$op);
+}
+
+@mixin phone() {
+    // 576: Max mobile device width from Bootstrap4
+    @media screen and (max-width: $sm) {
+        @content;
+    }
+}
+
+@mixin not-computer() {
+    // 576: Max mobile device width from Bootstrap4
+    @media screen and (max-width: $xl) {
+        @content;
+    }
+}
+
+@mixin not-phone() {
+    @media screen and (min-width: $sm) {
+        @content;
+    }
+}

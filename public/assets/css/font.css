@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'TT Supermolot';
+    src: url('../fonts/TTSupermolot-Regular.eot');
+    src: url('../fonts/TTSupermolot-Regular.eot') format('embedded-opentype'),
+        url('../fonts/TTSupermolot-Regular.woff2') format('woff2'), url('../fonts/TTSupermolot-Regular.woff') format('woff'),
+        url('../fonts/TTSupermolot-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Supermolot';
+    src: url('../fonts/TTSupermolot-Bold.eot');
+    src: url('../fonts/TTSupermolot-Bold.eot') format('embedded-opentype'),
+        url('../fonts/TTSupermolot-Bold.woff2') format('woff2'), url('../fonts/TTSupermolot-Bold.woff') format('woff'),
+        url('../fonts/TTSupermolot-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
