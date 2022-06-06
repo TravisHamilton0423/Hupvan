@@ -2,13 +2,9 @@
 
 ## Introduction
 This application is a enterprise management system developed and used by **"000"** IT company.
-React프로젝트를 개발하기위한 boilerplate
+
 
 ## Functionalities of this application
-* reduxForm 구현
-* angleTheme구현
-* enar를 비롯한 일반 template적용 가능
-* redux를 immutable형이 아닌 일반Object형으로 변경
 ... ... ...
 
 ## Setup Introduction
